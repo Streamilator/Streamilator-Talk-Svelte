@@ -181,11 +181,11 @@
 
 		font-family: Simvoni, sans-serif;
 
-		--orange: #f9a636;
+		--orange: #176d71;
 		--orange-button: var(--orange);
-		--orange-light: #ffce8c;
-		--orange-dark: #b46d34;
-		--orange-scrollbar-back: #a15d04;
+		--orange-light: #419498;
+		--orange-dark: #0f474a;
+		--orange-scrollbar-back: #0a4346;
 		--background: white;
 		--foreground: black;
 		--foreground-orange: white;
@@ -200,10 +200,10 @@
 	}
 
 	#main.theme-orange.mode-dark {
-		--orange: #b35305;
-		--orange-light: #dd7f14;
-		--orange-dark: #ac4718;
-		--orange-scrollbar-back: rgb(131, 45, 5);
+		--orange: #0f474a;
+		--orange-light: #176d71;
+		--orange-dark: #134143;
+		--orange-scrollbar-back: #0a4346;
 		--background: #020010;
 		--foreground: #eef;
 		--foreground-orange: #eef;
@@ -213,9 +213,9 @@
 		--orange-light: #aa0000;
 		--orange-dark: #aa0000;
 		--orange-scrollbar-back: #aa0000;*/
-		--orange: #4d97ff;
-		--orange-light: #79b7ff;
-		--orange-dark: #3685eb;
+		--orange: #1a1e84;
+		--orange-light: #2e32a6;
+		--orange-dark: #0f1149;
 		--orange-scrollbar-back: #374eb1;
 		--background: white;
 		--foreground: black;
