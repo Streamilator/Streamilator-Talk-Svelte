@@ -328,7 +328,7 @@ function deHTML( input ) {
 			{/if}
 		</div>
 	</div>
-	<p class="post-content">{@html format(deHTML(convertLinks(post.content)))}</p>
+	<p class="post-content">{@html format(convertLinks(deHTML(post.content)))}</p>
 	<div class="post-images">
 		{#each images as { title, url }}
 			<a href={url} target="_blank" rel="noreferrer"
