@@ -215,7 +215,7 @@
 		--orange-scrollbar-back: #aa0000;*/
 		--orange: #1a1e84;
 		--orange-light: #2e32a6;
-		--orange-dark: #0f1149;
+		--orange-dark: #13166c;
 		--orange-scrollbar-back: #374eb1;
 		--background: white;
 		--foreground: black;
