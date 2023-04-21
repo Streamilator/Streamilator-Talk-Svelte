@@ -205,7 +205,7 @@
 				<div class="logo top" bind:this={logo}>
 					<img
 						bind:this={logoImg}
-						alt="Meower"
+						alt="Streamilator"
 						src={meowerLogo}
 						class="logo-img"
 						height="40"
@@ -259,14 +259,14 @@
 					(Several features will be unavailable while not logged in.)
 				</p>
 				<div>
-					<p class="small">Meower Svelte v{version}</p>
+					<p class="small">Streamilator Talk Svelte v{version}</p>
 					<img src={meowy} alt="" height="64" />
 				</div>
 			</div>
 		</div>
 	{:else if $page === "login"}
 		<div class="fullcenter">
-			<h1>Login to Meower</h1>
+			<h1>Login to Streamilator Talk</h1>
 
 			<form
 				class="column-ui"
@@ -307,7 +307,7 @@
 		</div>
 	{:else if $page === "join"}
 		<div class="fullcenter">
-			<h1>Welcome to Meower</h1>
+			<h1>Welcome to Streamilator Talk</h1>
 
 			<form
 				class="column-ui"
@@ -426,7 +426,7 @@
 							href="https://meower.org/legal"
 							target="_blank"
 							rel="noreferrer"
-							>Meower's Terms of Service and Privacy Policy</a
+							>Streamilator Talk's Terms of Service and Privacy Policy</a
 						>
 					</label>
 				</p>
