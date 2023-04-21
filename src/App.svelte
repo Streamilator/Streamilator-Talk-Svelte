@@ -179,7 +179,7 @@
 		width: 100%;
 		height: 100%;
 
-		font-family: Simvoni, sans-serif;
+		font-family: inter, sans-serif;
 
 		--orange: #176d71;
 		--orange-button: var(--orange);
