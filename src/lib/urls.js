@@ -4,7 +4,7 @@
 
 export const linkUrl =
 	localStorage.getItem("meower_linkurl") ||
-	"wss://streamilator.tk/";
+	"wss://server.streamilator.tk/";
 export const apiUrl =
 	localStorage.getItem("meower_apiurl") || "https://server.streamilator.tk/";
 export const encodeApiURLParams =
