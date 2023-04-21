@@ -13,9 +13,9 @@
 		<h1>Home</h1>
 		<div class="overflow">
 			{#if $ulist.length == 1}
-				You are the only user online.
+				You are the only user online. Try https://discord.gg/sX6qUuQz9a.
 			{:else if $ulist.length == 0}
-				Nobody is online.
+				Nobody is online? Somehow you are a ghost.
 			{:else}
 				There are currently {$ulist.length} users online ({$ulist.join(
 					", "
