@@ -65,6 +65,7 @@
 
 		// Discord
 		"https://cdn.discordapp.com/",
+		"https://discord.com/",
 	];
 
 	// TODO: make bridged tag a setting
@@ -309,7 +310,7 @@
 			{/if}
 		</div>
 	</div>
-	<p class="post-content">{@html format(convertLinks(deHTML(post.content)))}</p>
+	<p class="post-content">{@html format(linkify(deHTML(post.content)))}</p>
 	<div class="post-images">
 		{#each images as { title, url }}
 			<a href={url} target="_blank" rel="noreferrer"
