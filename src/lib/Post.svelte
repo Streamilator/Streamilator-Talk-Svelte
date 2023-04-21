@@ -123,6 +123,64 @@
 		if (!webhook) loadProfile(post.user);
 	}
 	onMount(initPostUser);
+	
+	function format( input ) {
+	let dhout = input
+	dhout = dhout.replaceAll("[b]", "<b>");
+	dhout = dhout.replaceAll("[/b]", "</b>");
+	dhout = dhout.replaceAll("[i]", "<i>");
+	dhout = dhout.replaceAll("[/i]", "</i>");
+	dhout = dhout.replaceAll("[u]", "<ins>");
+	dhout = dhout.replaceAll("[/u]", "</ins>");
+
+	return dhout
+}
+function deHTML( input ) {
+	let dhout = input
+	dhout = dhout.replaceAll("&", "&amp;");
+	dhout = dhout.replaceAll("<", "&lt;");
+	dhout = dhout.replaceAll(">", "&gt;");
+	dhout = dhout.replaceAll('"', "&quot;");
+	dhout = dhout.replaceAll("'", "&apos;");
+	return dhout
+}
+	const convertLinks = ( input ) => {
+
+  let text = input;
+  const linksFound = text.match( /(?:www|https?)[^\s]+/g );
+  const aLink = [];
+//   text = text.replace(/\</g,"&lt;")   //for <
+//   text = text.replace(/\>/g,"&gt;")   //for >
+
+  if ( linksFound != null ) {
+
+    for ( let i=0; i<linksFound.length; i++ ) {
+      let replace = linksFound[i];
+      if ( !( linksFound[i].match( /(http(s?)):\/\// ) ) ) { replace = 'http://' + linksFound[i] }
+      let linkText = replace.split( '/' )[2];
+      if ( linkText.substring( 0, 3 ) == 'www' ) { linkText = linkText.replace( 'www.', '' ) }
+      if ( linkText.match( /youtu/ ) ) {
+
+        let youtubeID = replace.split( '/' ).slice(-1)[0];
+        aLink.push( '<div class="video-wrapper"><iframe src="https://www.youtube.com/embed/' + youtubeID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' )
+    	  }
+	      else if ( linkText.match( /vimeo/ ) ) {
+    	    let vimeoID = replace.split( '/' ).slice(-1)[0];
+	        aLink.push( '<div class="video-wrapper"><iframe src="https://player.vimeo.com/video/' + vimeoID + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>' )
+    	  }
+	      else {
+    	    aLink.push( '<a href="' + replace + '" target="_blank">' + linkText + '</a>' );
+	      }
+    	  text = text.split( linksFound[i] ).map(item => { return aLink[i].includes('iframe') ? item.trim() : item } ).join( aLink[i] );
+	    }
+    	return text;
+
+	  }
+	  else {
+    	return input;
+	  }
+	}
+	
 
 	$: noPFP =
 		post.user === "Notification" ||
@@ -270,7 +328,7 @@
 			{/if}
 		</div>
 	</div>
-	<p class="post-content">{post.content}</p>
+	<p class="post-content">{@html format(deHTML(convertLinks(post.content)))}</p>
 	<div class="post-images">
 		{#each images as { title, url }}
 			<a href={url} target="_blank" rel="noreferrer"
