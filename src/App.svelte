@@ -170,7 +170,7 @@
 </main>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 	
 	.spinner-container {
 		position: fixed;
@@ -183,7 +183,7 @@
 		width: 100%;
 		height: 100%;
 
-		font-family: 'Ubuntu';
+		font-family: 'Inter';
 
 		--orange: #176d71;
 		--orange-button: var(--orange);
