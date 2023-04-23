@@ -1,40 +1,40 @@
 @font-face {
-	font-family: simvoni;
-	src: url(./font/Simvoni.ttf);
+	font-family: inter;
+	src: url(https://fonts.googleapis.com/css?family=Inter);
 	font-display: swap;
 }
 
 @font-face {
-	font-family: simvoni;
-	src: url(./font/Simvoni-Bold.ttf);
+	font-family: inter;
+	src: url(https://fonts.googleapis.com/css?family=Inter);
 	font-weight: bold;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: simvoni;
-	src: url(./font/Simvoni-BoldItalic.ttf);
+	font-family: inter;
+	src: url(https://fonts.googleapis.com/css?family=Inter);
 	font-weight: bold;
 	font-style: italic;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: simvoni;
-	src: url(./font/Simvoni-Italic.ttf);
+	font-family: inter;
+	src: url(https://fonts.googleapis.com/css?family=Inter);
 	font-style: italic;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: simvoni-il;
-	src: url(./font/ModifiedSimvoni.ttf);
+	font-family: inter;
+	src: url(https://fonts.googleapis.com/css?family=Inter);
 	font-display: swap;
 }
 
 @font-face {
-	font-family: simvoni-il;
-	src: url(./font/ModifiedSimvoni-Bold.ttf);
+	font-family: inter;
+	src: url(https://fonts.googleapis.com/css?family=Inter);
 	font-weight: bold;
 	font-display: swap;
 }
