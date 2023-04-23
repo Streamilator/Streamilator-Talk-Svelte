@@ -182,7 +182,7 @@
 		width: 100%;
 		height: 100%;
 
-		font-family: inter, sans-serif;
+		font-family: inter;
 
 		--orange: #176d71;
 		--orange-button: var(--orange);
