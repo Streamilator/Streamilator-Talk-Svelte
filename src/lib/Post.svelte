@@ -138,7 +138,7 @@ function format( input ) {
 		"/bq":"</blockquote>",
 	}
 	Object.keys(formating).forEach(function(key) {
-		dhout = dhout.replaceAll(`${"["+key+"]"}`, formating[key]);\
+		out = out.replaceAll(`${"["+key+"]"}`, formating[key]);
 	})
 	return out
 }
