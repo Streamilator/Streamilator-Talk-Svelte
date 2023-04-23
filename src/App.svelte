@@ -1,4 +1,4 @@
-<!-- Meower Svelte, the app itself. --> 
+<!-- Meower Svelte, the app itself. -->
 <script>
 	import Main from "./screens/Main.svelte";
 	import Setup from "./screens/Setup.svelte";
