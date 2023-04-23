@@ -125,17 +125,23 @@
 	}
 	onMount(initPostUser);
 	
-	function format( input ) {
-		let dhout = input
-		dhout = dhout.replaceAll("[b]", "<b>");
-		dhout = dhout.replaceAll("[/b]", "</b>");
-		dhout = dhout.replaceAll("[i]", "<i>");
-		dhout = dhout.replaceAll("[/i]", "</i>");
-		dhout = dhout.replaceAll("[u]", "<ins>");
-		dhout = dhout.replaceAll("[/u]", "</ins>");
-
-		return dhout
+function format( input ) {
+	let out = input
+	let formating = {
+		"b":"<b>",
+		"/b":"</b>",
+		"i":"<i>",
+		"/i":"</i>",
+		"u":"<ins>",
+		"/u":"</ins>",
+		"bq":"<blockquote>",
+		"/bq":"</blockquote>",
 	}
+	Object.keys(formating).forEach(function(key) {
+		dhout = dhout.replaceAll(`${"["+key+"]"}`, formating[key]);\
+	})
+	return out
+}
 	function deHTML( input ) {
 		let dhout = input
 		dhout = dhout.replaceAll("&", "&amp;");
@@ -377,5 +383,15 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.25em;
+	}
+	
+	.post-content :global(blockquote) {
+		border-left: 3px solid var(--orange);
+		margin: .25em .25em .25em 0;
+		padding: .25em .25em .25em .625em;
+		background-color: rgba(255,255,255,0.05);
+		padding-right: 0;
+		margin-right: 0.4em;
+		border-radius: 0.15em;
 	}
 </style>
