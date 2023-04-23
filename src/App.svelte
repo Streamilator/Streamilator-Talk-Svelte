@@ -44,7 +44,6 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 
 <main
 	id="main"
@@ -171,6 +170,8 @@
 </main>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+	
 	.spinner-container {
 		position: fixed;
 		right: 27px;
@@ -182,7 +183,7 @@
 		width: 100%;
 		height: 100%;
 
-		font-family: inter;
+		font-family: 'Ubuntu';
 
 		--orange: #176d71;
 		--orange-button: var(--orange);
