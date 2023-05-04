@@ -136,6 +136,12 @@ function format( input ) {
 		"/u":"</ins>",
 		"bq":"<blockquote>",
 		"/bq":"</blockquote>",
+		"s":"<strike>",
+		"/s":"</strike>",
+		"list":"<ul>",
+		"/list":"</ul>",
+		"item":"<li>",
+		"/itel":"</li>",
 	}
 	Object.keys(formating).forEach(function(key) {
 		out = out.replaceAll(`${"["+key+"]"}`, formating[key]);
