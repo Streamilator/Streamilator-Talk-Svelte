@@ -408,4 +408,13 @@ function format( input ) {
 		margin-right: 0.4em;
 		border-radius: 0.15em;
 	}
+	
+	table, td, th {
+		border: 2px var(--orange) solid;
+		border-radius: 4px;
+	}
+	
+	th, td {
+		padding-inline-start: 1px;
+	}
 </style>
