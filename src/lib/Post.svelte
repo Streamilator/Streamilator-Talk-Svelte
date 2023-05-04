@@ -141,7 +141,15 @@ function format( input ) {
 		"list":"<ul>",
 		"/list":"</ul>",
 		"item":"<li>",
-		"/itel":"</li>",
+		"/item":"</li>",
+		"table":"<table>",
+		"/table":"</table>",
+		"row":"<tr>",
+		"/row":"</tr>",
+		"header":"<th>",
+		"/header":"</th>",
+		"data":"<td>",
+		"/data":"</td>",
 	}
 	Object.keys(formating).forEach(function(key) {
 		out = out.replaceAll(`${"["+key+"]"}`, formating[key]);
