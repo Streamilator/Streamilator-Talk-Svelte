@@ -409,12 +409,12 @@ function format( input ) {
 		border-radius: 0.15em;
 	}
 	
-	table, td, th {
+	.post-content :global(table, td, th) {
 		border: 2px var(--orange) solid;
 		border-radius: 4px;
 	}
 	
-	th, td {
+	.post-content :global(th, td) {
 		padding-inline-start: 1px;
 	}
 </style>
