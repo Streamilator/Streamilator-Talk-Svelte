@@ -399,7 +399,7 @@ function format( input ) {
 		gap: 0.25em;
 	}
 	
-	.post-content :global(blockquote) {
+	.post-content:global(blockquote) {
 		border-left: 3px solid var(--orange);
 		margin: .25em .25em .25em 0;
 		padding: .25em .25em .25em .625em;
@@ -409,12 +409,12 @@ function format( input ) {
 		border-radius: 0.15em;
 	}
 	
-	.post-content :global(table, td, th) {
+	:global(table, td, th) {
 		border: 2px var(--orange) solid;
 		border-radius: 4px;
 	}
 	
-	.post-content :global(th, td) {
+	:global(th, td) {
 		padding-inline-start: 1px;
 	}
 </style>
