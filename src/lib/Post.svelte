@@ -136,6 +136,20 @@ function format( input ) {
 		"/u":"</ins>",
 		"bq":"<blockquote>",
 		"/bq":"</blockquote>",
+		"s":"<strike>",
+		"/s":"</strike>",
+		"list":"<ul>",
+		"/list":"</ul>",
+		"item":"<li>",
+		"/item":"</li>",
+		"table":"<table>",
+		"/table":"</table>",
+		"row":"<tr>",
+		"/row":"</tr>",
+		"header":"<th>",
+		"/header":"</th>",
+		"data":"<td>",
+		"/data":"</td>",
 	}
 	Object.keys(formating).forEach(function(key) {
 		out = out.replaceAll(`${"["+key+"]"}`, formating[key]);
@@ -385,7 +399,7 @@ function format( input ) {
 		gap: 0.25em;
 	}
 	
-	.post-content :global(blockquote) {
+	:global(blockquote) {
 		border-left: 3px solid var(--orange);
 		margin: .25em .25em .25em 0;
 		padding: .25em .25em .25em .625em;
@@ -393,5 +407,14 @@ function format( input ) {
 		padding-right: 0;
 		margin-right: 0.4em;
 		border-radius: 0.15em;
+	}
+	
+	:global(table, td, th) {
+		border: 2px var(--orange) solid;
+		border-radius: 4px;
+	}
+	
+	:global(th, td) {
+		padding-inline-start: 1px;
 	}
 </style>
