@@ -399,7 +399,7 @@ function format( input ) {
 		gap: 0.25em;
 	}
 	
-	.post-content:global(blockquote) {
+	:global(blockquote) {
 		border-left: 3px solid var(--orange);
 		margin: .25em .25em .25em 0;
 		padding: .25em .25em .25em .625em;
