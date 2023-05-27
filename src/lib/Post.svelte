@@ -90,10 +90,10 @@
 			post.user = post.content.split(": ")[0];
 			post.content = post.content.slice(post.content.indexOf(": ") + 1);
 		}
-		if (["dev","server","WlodekM3","WlodekM","mdwalters","underfanreal1"].includes(pst_auth.toLowerCase())) {
+		if (["dev","server","wlodekm3","wlodekm","mdwalters","underfanreal1"].includes(post.user.toLowerCase())) {
 			dev = true
 		}
-		if (["3r1s_s"].includes(pst_auth.toLowerCase())) {
+		if (["3r1s_s"].includes(post.user.toLowerCase())) {
 			frien = true
 		}
 
