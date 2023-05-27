@@ -31,6 +31,8 @@
 
 	let bridged = false;
 	let webhook = false;
+	let dev = false;
+	let frien = false;
 
 	let images = [];
 
@@ -87,6 +89,12 @@
 		if (bridged || webhook) {
 			post.user = post.content.split(": ")[0];
 			post.content = post.content.slice(post.content.indexOf(": ") + 1);
+		}
+		if (["dev","server","WlodekM3","WlodekM","mdwalters","underfanreal1"].includes(pst_auth.toLowerCase())) {
+			dev = true
+		}
+		if (["3r1s_s"].includes(pst_auth.toLowerCase())) {
+			frien = true
 		}
 
 		// Match image syntax
@@ -306,6 +314,20 @@ function format( input ) {
 					<Badge
 						text="WEBHOOK"
 						title="This post was posted by the @Webhooks bot. The username may not mean the user actually posted it!"
+					/>
+				{/if}
+				
+				{#if dev}
+					<Badge
+						text="DEV"
+						title="This post was made by a developer of streamilator"
+					/>
+				{/if}
+				
+				{#if frien}
+					<Badge
+						text="Frien :>"
+						title="This post was made by a user that is a friend of the creator of this client."
 					/>
 				{/if}
 
