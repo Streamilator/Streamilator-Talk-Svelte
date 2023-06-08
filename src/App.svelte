@@ -22,6 +22,7 @@
 	import LogoutModal from "./lib/modals/Logout.svelte";
 	import LinkDiscord from "./lib/modals/LinkDiscord.svelte";
 	import AnnounceModal from "./lib/modals/Announce.svelte";
+	// import DevTooldModal from "./lib/modals/DevTools.svelte";
 
 	import ModPanel from "./lib/ModPanel.svelte";
 
@@ -73,11 +74,11 @@
 
 	{#if $disconnected}
 		<Modal>
-			<h2 slot="header">Me-owch.</h2>
+			<h2 slot="header">Uh-oh.</h2>
 			<div slot="default">
 				<p>
 					{#if $disconnectReason === ""}
-						Something went wrong and the connection to Meower was
+						Something went wrong and the connection to Streamilator Talk was
 						lost.
 					{:else if $disconnectReason === "Failed to load userdata"}
 						An unexpected error occurred while trying to load your
@@ -86,9 +87,9 @@
 						The server has blocked your IP address ({link.ip}).
 					{:else if $disconnectReason == "E:110 | ID conflict"}
 						There has been a hiccup! Looks like you logged into
-						Meower from another device.
+						Streamilator Talk from another device.
 						<br /><br />
-						Please check any devices currently logged into Meower and
+						Please check any devices currently logged into Streamilator Talk and
 						try again.
 					{:else if $disconnectReason == "E:018 | Account Banned"}
 						You have been banned by a moderator.
@@ -151,6 +152,8 @@
 			<RemoveMemberModal />
 		{:else if $modalPage === "linkDiscord"}
 			<LinkDiscord />
+		{:else if $modalPage === "devTools"}
+			<!-- <DevTooldModal /> wip dev tools -->
 		{:else}
 			<ErrorModal />
 		{/if}
