@@ -30,7 +30,7 @@
 		</div>
 <!-- 	DEV	   -->
 		{:else}
-			{$user.name}
+			{$user.name.toLowerCase()}
 		{/if}
 		<h1>Home</h1>
 		<div class="overflow">
