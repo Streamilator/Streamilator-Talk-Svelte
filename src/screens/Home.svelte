@@ -7,10 +7,8 @@
 	import Container from "../lib/Container.svelte";
 	import PostList from "../lib/PostList.svelte";
 	var isDev = false
-	if (user.name) {
-		if (window.location.href != "https://svelte.streamilator.tk") {
-			isDev = true
-		}
+	if (window.location.href != "https://svelte.streamilator.tk") {
+		isDev = true
 	}
 </script>
 
