@@ -27,8 +27,6 @@
 			>
 		</div>
 <!-- 	DEV	   -->
-		{:else}
-			{$user.name.toLowerCase()} ; {isDev}
 		{/if}
 		<h1>Home</h1>
 		<div class="overflow">
