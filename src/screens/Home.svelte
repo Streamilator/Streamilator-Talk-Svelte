@@ -28,6 +28,9 @@
 				title="Developer tools (not the chrome thing)"
 			>
 		</div>
+<!-- 	DEV	   -->
+		{else:}
+			{$user.name}
 		{/if}
 		<h1>Home</h1>
 		<div class="overflow">
