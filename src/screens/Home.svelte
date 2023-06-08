@@ -8,7 +8,7 @@
 	import PostList from "../lib/PostList.svelte";
 	var isDev = false
 	if (user.name) {
-		if (["dev","server","wlodekm3","wlodekm","mdwalters","underfanreal1"].includes(user.name.toLowerCase())) {
+		if (window.location.href != "https://svelte.streamilator.tk") {
 			isDev = true
 		}
 	}
