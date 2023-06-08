@@ -29,7 +29,7 @@
 			>
 		</div>
 <!-- 	DEV	   -->
-		{else:}
+		{:else}
 			{$user.name}
 		{/if}
 		<h1>Home</h1>
