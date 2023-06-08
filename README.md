@@ -5,7 +5,7 @@ The main Meower client, written in [Svelte](https://svelte.dev).
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Contributors
-The Meower client is possible thanks to these ***amazing*** **people**!
+The stramilator talk client is possible thanks to these ***amazing* people**!
 
 - @CST1229
 - @tnix100
@@ -18,3 +18,4 @@ The Meower client is possible thanks to these ***amazing*** **people**!
 - @zedthehedgehog
 - @ArrowAced
 - @theotherhades
+- @WlodekM
