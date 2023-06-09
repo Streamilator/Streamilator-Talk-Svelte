@@ -20,6 +20,7 @@
 	const PFP_COUNT = 38;
 	var pfp_temp = $user.pfp_data
 	var result_eval, code_eval
+	var target_modal = ""
 	const pfps = new Array(PFP_COUNT).fill().map((_, i) => i + 1);
 	pfps.push(-1, 500, 101, 102, 404) //add secret pfps
 	let pfpSwitcher = false;
@@ -228,6 +229,22 @@
 		</div>
 		<h1>Go to page</h1>
 		<input bind:value={target_page}>
+	</Container>
+	<Container>
+		<div class="settings-controls">
+			<button
+				class="circle settings"
+				alt="Go!"
+				on:click={() => {
+								$modalShown = false;
+								modalPage.set(target_modal);
+								modalShown.set(true);
+								}
+						  }
+			/>
+		</div>
+		<h1>Open modal</h1>
+		<input bind:value={target_modal}>
 	</Container>
 	<Container>
 		<h1>Evaluate</h1>
