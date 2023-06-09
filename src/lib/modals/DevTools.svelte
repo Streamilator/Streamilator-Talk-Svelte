@@ -304,7 +304,7 @@
 			/>
 		</div>
 		<h1>Set pfp</h1>
-		<input bind:value={pfp_temp} class="white">
+		<input bind:value={pfp_temp} class="white" type="text">
 	</Container>
 	{:catch e}
 		<ProfileView username={$profileClicked} />
@@ -321,7 +321,7 @@
 			/>
 		</div>
 		<h1>Go to page</h1>
-		<input bind:value={target_page} class="white">
+		<input bind:value={target_page} class="white" type="text">
 	</Container>
 	<Container>
 		<div class="settings-controls">
@@ -337,7 +337,7 @@
 			/>
 		</div>
 		<h1>Open modal</h1>
-		<input bind:value={target_modal} class="white">
+		<input bind:value={target_modal} class="white" type="text">
 	</Container>
 	<Container>
 		<h1>Evaluate</h1>
@@ -401,7 +401,7 @@
 			/>
 		</div>
 		
-		<input disabled bind:value={result_eval} class="white">
+		<input disabled bind:value={result_eval} class="white" type="text">
 			</form>
 	</Container>
 	
