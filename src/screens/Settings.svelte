@@ -4,6 +4,8 @@
 
 	import {user, modalShown, modalPage} from "../lib/stores.js";
 	import * as clm from "../lib/clmanager.js";
+	var target_modal = ""
+	
 </script>
 
 <!--
@@ -158,35 +160,22 @@
 {/if}
 <details>
   <summary></summary>
-  <Container>
-      <h2>Open modal</h2>
-      Opens a modal.
-      <hr>
-
-      <form 
-          class="createpost"
-          autocomplete="off"
-          on:submit|preventDefault={e => {	
-              Show(e.target[0].value);
-              console.log("Modal opened via developer tools")
-          }}
-      >
-          <input
-              type="text"
-              class="white"
-              placeholder="Modal name"
-              name="gtuser"
-              autocomplete="false"
-              on:keydown={(event) => {
-                  if (event.key == "Enter" && !shiftHeld) {
-                      event.preventDefault();
-                      document.getElementById("submitpost").click();
-                  }
-              }}
-          >
-          <button id="submitpost">Open Modal</button>
-      </form>
-  </Container>
+	<Container>
+		<div class="settings-controls">
+			<button
+				class="circle settings"
+				alt="Go!"
+				on:click={() => {
+								$modalShown = false;
+								modalPage.set(target_modal);
+								modalShown.set(true);
+								}
+						  }
+			/>
+		</div>
+		<h1>Open modal</h1>
+		<input bind:value={target_modal} class="white" type="text">
+	</Container>
 </details>
 
 <!--
