@@ -138,7 +138,7 @@
 	</Container>
 <!-- 	<Container style="height: 150px;">
 		<div class="settings-controls">
-            <input bind:value={whusername} type="text" id="username" style="margin-bottom:4px">
+            <input bind:value={whusername} type="text" id="username" style="margin-bottom:4px" class="white">
         	<textarea bind:value={whpost} rows="4" class="container type-message" style="resize: none;width:calc(100% - (11px * 2) - 100px)"></textarea>
 			<button
 				class="circle settings"
@@ -304,8 +304,11 @@
 			/>
 		</div>
 		<h1>Set pfp</h1>
-		<input bind:value={pfp_temp}>
+		<input bind:value={pfp_temp} class="white">
 	</Container>
+	{:catch e}
+		<ProfileView username={$profileClicked} />
+	{/await}
 	<Container>
 		<div class="settings-controls">
 			<button
@@ -318,7 +321,7 @@
 			/>
 		</div>
 		<h1>Go to page</h1>
-		<input bind:value={target_page}>
+		<input bind:value={target_page} class="white">
 	</Container>
 	<Container>
 		<div class="settings-controls">
@@ -334,7 +337,7 @@
 			/>
 		</div>
 		<h1>Open modal</h1>
-		<input bind:value={target_modal}>
+		<input bind:value={target_modal} class="white">
 	</Container>
 	<Container>
 		<h1>Evaluate</h1>
@@ -398,12 +401,9 @@
 			/>
 		</div>
 		
-		<input disabled bind:value={result_eval}>
+		<input disabled bind:value={result_eval} class="white">
 			</form>
 	</Container>
-	{:catch e}
-		<ProfileView username={$profileClicked} />
-	{/await}
 	
 </Modal>
 <style>
