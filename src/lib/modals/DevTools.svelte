@@ -194,6 +194,64 @@
 				on:click={() => goto("groupcat")}
 			/>
 		</div>
+		<h1>Set server urls </h1>
+		Set to another meower server.
+		<br>
+		<hr>
+		<form 
+			class="createpost"
+			autocomplete="off"
+			on:submit|preventDefault={async e => {	
+				localStorage.setItem("meower_linkurl",e.target[0].value+"/")
+				localStorage.setItem("meower_apiurl",e.target[1].value+"/")
+				cljs.disconnect()
+				await tick();
+				location.reload();
+				console.log("Meower server was changed in developer tools, refreshing...")
+			}}
+		>
+			<input
+				type="text"
+				class="white"
+				placeholder="Server URL"
+				name="switchserver"
+				autocomplete="false"
+				on:keydown={(event) => {
+					if (event.key == "Enter" && !shiftHeld) {
+						event.preventDefault();
+						document.getElementById("submitpost4").click();
+					}
+				}}
+			>
+			<input
+				type="text"
+				class="white"
+				placeholder="API URL"
+				name="switchapi"
+				autocomplete="false"
+				on:keydown={(event) => {
+					if (event.key == "Enter" && !shiftHeld) {
+						event.preventDefault();
+						document.getElementById("submitpost4").click();
+					}
+				}}
+			>
+			<button id="submitpost4">Connect</button>
+		</form>
+		<br>
+		<small style="font-size: 0.5em;">
+			Created by the bettermeower team
+		</small>
+	</div>
+	</Container>
+	<Container>
+		<div class="settings-controls">
+			<button
+				class="circle settings"
+				alt="Go to group cat"
+				on:click={() => goto("groupcat")}
+			/>
+		</div>
 		<h1>group cat</h1>
 		Groupcat
 	</Container>
