@@ -20,7 +20,7 @@
 				class="circle settings"
 				on:click={()=>{
 					$profileClicked = $user.name;
-					modalPage.set("devPanel");
+					modalPage.set("devTools");
 					modalShown.set(true);
 				}}
 				title="Developer tools (not the chrome thing)"
