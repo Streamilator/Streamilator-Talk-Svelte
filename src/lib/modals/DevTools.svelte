@@ -131,8 +131,7 @@
 		chatid,
 		modalShown,
 		modalPage,
-		lastTyped,
-		modalShown
+		lastTyped
 	} from "../stores.js";
 </script>
 
