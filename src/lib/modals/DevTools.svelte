@@ -171,6 +171,33 @@
 		<h1>Moderate User</h1>
 		Moderate a certain User.
 	</Container>
+	<Container>
+		<div class="settings-controls">
+			<button
+				class="circle settings"
+				alt="Go to group cat"
+				on:click={() => goto("groupcat")}
+			/>
+		</div>
+		<h1>group cat</h1>
+		Groupcat
+	</Container>
+	<Container>
+		<div class="settings-controls">
+			<button
+				class="circle settings"
+				alt="Go!"
+				on:click={() => {
+								goto(target_page)
+								}
+						  }
+			/>
+		</div>
+		<h1>Go to page</h1>
+		<input bind:value={target_page}>
+	</Container>
+	
+</Modal>
 <!-- 	<Container>
 		<div class="settings-controls">
 			<p>Start:</p>
@@ -194,17 +221,7 @@
 		<h1>Spam live</h1>
 		Spam livechat with join messages.<br><br><br><br><br><br>
 	</Container> -->
-	<Container>
-		<div class="settings-controls">
-			<button
-				class="circle settings"
-				alt="Go to group cat"
-				on:click={() => goto("groupcat")}
-			/>
-		</div>
-		<h1>group cat</h1>
-		Groupcat
-<!-- 	</Container>
+			<!-- 
 	{#await loadProfile()}
 			<Loading />
 	{:then data}
@@ -224,20 +241,7 @@
 		<h1>Set pfp</h1>
 		<input bind:value={pfp_temp}>
 	</Container> -->
-	<Container>
-		<div class="settings-controls">
-			<button
-				class="circle settings"
-				alt="Go!"
-				on:click={() => {
-								goto(target_page)
-								}
-						  }
-			/>
-		</div>
-		<h1>Go to page</h1>
-		<input bind:value={target_page}>
-	</Container><!-- 
+			<!-- 
 	<Container>
 		<h1>Evaluate</h1>
 		Run code (Dangerous)
@@ -306,8 +310,6 @@
 	{:catch e}
 		<ProfileView username={$profileClicked} />
 	{/await} -->
-	
-</Modal>
 
 <style>
 	button.circle {
