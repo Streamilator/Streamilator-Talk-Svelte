@@ -242,7 +242,6 @@
 		<small style="font-size: 0.5em;">
 			Created by the bettermeower team
 		</small>
-	</div>
 	</Container>
 	<Container>
 		<div class="settings-controls">
