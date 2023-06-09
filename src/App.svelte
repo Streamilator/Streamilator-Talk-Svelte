@@ -42,6 +42,9 @@
 		modPanelOpen,
 	} from "./lib/stores.js";
 	import {tick} from "svelte";
+	if (window.location.href != "https://svelte.streamilator.tk") {
+		isDev = true
+	}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,6 +111,7 @@
 						setupPage.set("reconnect");
 					}}>Reconnect</button
 				>
+				{#if isDev}
 					<button on:click={async () => {
 						localStorage.removeItem("meower_linkurl")
 						localStorage.removeItem("meower_apiurl")
@@ -117,6 +121,7 @@
 						disconnected.set(false);
 						$modalPage = "devTools"
 					}}>Open dev tools</button>
+				{/if}
 			</div>
 		</Modal>
 	{/if}
