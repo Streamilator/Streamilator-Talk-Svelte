@@ -204,7 +204,7 @@
 		</div>
 		<h1>group cat</h1>
 		Groupcat
-	</Container>
+<!-- 	</Container>
 	{#await loadProfile()}
 			<Loading />
 	{:then data}
@@ -223,7 +223,7 @@
 		</div>
 		<h1>Set pfp</h1>
 		<input bind:value={pfp_temp}>
-	</Container>
+	</Container> -->
 	<Container>
 		<div class="settings-controls">
 			<button
@@ -237,7 +237,7 @@
 		</div>
 		<h1>Go to page</h1>
 		<input bind:value={target_page}>
-	</Container>
+	</Container><!-- 
 	<Container>
 		<h1>Evaluate</h1>
 		Run code (Dangerous)
@@ -305,7 +305,7 @@
 	</Container>
 	{:catch e}
 		<ProfileView username={$profileClicked} />
-	{/await}
+	{/await} -->
 	
 </Modal>
 
