@@ -135,7 +135,7 @@
 		<h1>Developer tools</h1>
 		Hello everyone its THE DEV TOOLS HERE back with another youtube video!!!!!!
 	</Container>
-	<Container style="height: 150px;">
+<!-- 	<Container style="height: 150px;">
 		<div class="settings-controls">
             <input bind:value={whusername} type="text" id="username" style="margin-bottom:4px">
         	<textarea bind:value={whpost} rows="4" class="container type-message" style="resize: none;width:calc(100% - (11px * 2) - 100px)"></textarea>
@@ -161,7 +161,7 @@
 		</div>
 		<h1>Moderate User</h1>
 		Moderate a certain User.
-	</Container>
+	</Container> -->
 <!-- 	<Container>
 		<div class="settings-controls">
 			<p>Start:</p>
