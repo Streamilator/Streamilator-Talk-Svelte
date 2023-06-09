@@ -120,6 +120,7 @@
 					<button on:click={async () => {
 						disconnected.set(false);
 						$modalPage = "devTools"
+						$modalShown = true
 					}}>Open dev tools</button>
 				{/if}
 			</div>
