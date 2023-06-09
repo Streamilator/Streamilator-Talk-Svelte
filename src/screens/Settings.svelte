@@ -156,6 +156,38 @@
 		Permanently delete your Meower account. <b class="important">THIS CANNOT BE UNDONE!</b>
 	</Container>
 {/if}
+<details>
+  <summary></summary>
+  <Container>
+      <h2>Open modal</h2>
+      Opens a modal.
+      <hr>
+
+      <form 
+          class="createpost"
+          autocomplete="off"
+          on:submit|preventDefault={e => {	
+              Show(e.target[0].value);
+              console.log("Modal opened via developer tools")
+          }}
+      >
+          <input
+              type="text"
+              class="white"
+              placeholder="Modal name"
+              name="gtuser"
+              autocomplete="false"
+              on:keydown={(event) => {
+                  if (event.key == "Enter" && !shiftHeld) {
+                      event.preventDefault();
+                      document.getElementById("submitpost").click();
+                  }
+              }}
+          >
+          <button id="submitpost">Open Modal</button>
+      </form>
+  </Container>
+</details>
 
 <!--
 	{"cmd": "direct", "val": {"cmd": "del_tokens", "val": ""}, "listener": "del_tokens"}
