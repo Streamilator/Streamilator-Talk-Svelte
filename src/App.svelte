@@ -108,6 +108,11 @@
 						setupPage.set("reconnect");
 					}}>Reconnect</button
 				>
+					<button on:click={async () => {
+						localStorage.removeItem("meower_linkurl")
+						localStorage.removeItem("meower_apiurl")
+						location.reload()
+					}}>Reset Server URLS</button>
 			</div>
 		</Modal>
 	{/if}
