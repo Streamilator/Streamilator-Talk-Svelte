@@ -15,7 +15,7 @@
 		$modalShown = false;
 	}}
 >
-	<h2 slot="header">Link Discord Account</h2>
+	<h2 slot="header">Link Discord Account [currently unavaliable]</h2>
 	<div slot="default">
 		<form
 			on:submit|preventDefault={e => {
@@ -42,6 +42,7 @@
 			<br /><br />
 			<div class="modal-buttons">
 				<button
+					disabled
 					type="button"
 					on:click|preventDefault={() => {
 						$modalShown = false;
