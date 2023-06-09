@@ -3,22 +3,22 @@
 <script>
 	import Modal from "../Modal.svelte";
 	
-	import Container from "../lib/Container.svelte";
+	import Container from "../Container.svelte";
 	
-	import {link} from "../lib/clmanager.js"
+	import {link} from "../clmanager.js"
 	import {tick} from "svelte";
 	import {fade} from "svelte/transition";
-	import {shiftHeld} from "../lib/keyDetect.js";
+	import {shiftHeld} from "../keyDetect.js";
 	
-	import {profileCache} from "../lib/loadProfile.js";
+	import {profileCache} from "../loadProfile.js";
 	import {autoresize} from "svelte-textarea-autoresize";
 
-	import ProfileView from "../lib/ProfileView.svelte";
+	import ProfileView from "../ProfileView.svelte";
 
-	import PFP from "../lib/PFP.svelte";
-	import Loading from "../lib/Loading.svelte";
-	import * as clm from "../lib/clmanager.js";
-	import {apiUrl, encodeApiURLParams} from "../lib/urls.js";
+	import PFP from "../PFP.svelte";
+	import Loading from "../Loading.svelte";
+	import * as clm from "../clmanager.js";
+	import {apiUrl, encodeApiURLParams} from "../urls.js";
 
 	const PFP_COUNT = 38;
 	var pfp_temp = $user.pfp_data
