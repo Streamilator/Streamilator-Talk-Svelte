@@ -22,7 +22,7 @@
 	import LogoutModal from "./lib/modals/Logout.svelte";
 	import LinkDiscord from "./lib/modals/LinkDiscord.svelte";
 	import AnnounceModal from "./lib/modals/Announce.svelte";
-	// import DevTooldModal from "./lib/modals/DevTools.svelte";
+	import DevTooldModal from "./lib/modals/DevTools.svelte";
 
 	import ModPanel from "./lib/ModPanel.svelte";
 
@@ -153,7 +153,7 @@
 		{:else if $modalPage === "linkDiscord"}
 			<LinkDiscord />
 		{:else if $modalPage === "devTools"}
-			<!-- <DevTooldModal /> wip dev tools -->
+			<DevTooldModal /> <!-- wip dev tools -->
 		{:else}
 			<ErrorModal />
 		{/if}
