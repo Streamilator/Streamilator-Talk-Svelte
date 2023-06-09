@@ -190,10 +190,43 @@
 		<div class="settings-controls">
 			<button
 				class="circle settings"
-				alt="Go to group cat"
-				on:click={() => goto("groupcat")}
-			/>
+				on:click={() => {
+					$modalPage = "clear-data";
+					$modalShown = true;
+					console.warn("Clear local data modal opened, proceed with caution!")
+				}}
+			></button>
 		</div>
+
+		<h2>Clear local data</h2>
+		This should only be used if you're having issues with Streamilator talk. This clears saved logins, local settings and preferences.
+		<br>
+		<small style="font-size: 0.5em;">
+			Created by the bettermeower team
+		</small>
+	</Container>
+<Container>
+	<div class="settings-controls">
+		<button
+			class="circle settings"
+			on:click={async () => {
+				localStorage.removeItem("meower_linkurl")
+				localStorage.removeItem("meower_apiurl")
+				location.reload();
+				console.warn("Server and API urls reset via developer tools")
+			}}
+		></button>
+	</div>
+
+	<h2>Reset server URLS</h2>
+	Reset API and server URL's
+	
+		<br>
+		<small style="font-size: 0.5em;">
+			Created by the bettermeower team
+		</small>
+</Container>
+	<Container>
 		<h1>Set server urls </h1>
 		Set to another meower server.
 		<br>
