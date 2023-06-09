@@ -113,6 +113,10 @@
 						localStorage.removeItem("meower_apiurl")
 						location.reload()
 					}}>Reset Server URLS</button>
+					<button on:click={async () => {
+						disconnected.set(false);
+						$modalPage = "devTools"
+					}}>Open dev tools</button>
 			</div>
 		</Modal>
 	{/if}
