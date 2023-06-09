@@ -22,6 +22,7 @@
 	import LogoutModal from "./lib/modals/Logout.svelte";
 	import LinkDiscord from "./lib/modals/LinkDiscord.svelte";
 	import AnnounceModal from "./lib/modals/Announce.svelte";
+	import DevTooldModal from "./lib/modals/DevTools.svelte";
 
 	import ModPanel from "./lib/ModPanel.svelte";
 
@@ -41,6 +42,10 @@
 		modPanelOpen,
 	} from "./lib/stores.js";
 	import {tick} from "svelte";
+	var isDev = false
+	if (window.location.href != "https://svelte.streamilator.tk") {
+		isDev = true
+	}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,11 +78,11 @@
 
 	{#if $disconnected}
 		<Modal>
-			<h2 slot="header">Me-owch.</h2>
+			<h2 slot="header">Uh-oh.</h2>
 			<div slot="default">
 				<p>
 					{#if $disconnectReason === ""}
-						Something went wrong and the connection to Meower was
+						Something went wrong and the connection to Streamilator Talk was
 						lost.
 					{:else if $disconnectReason === "Failed to load userdata"}
 						An unexpected error occurred while trying to load your
@@ -86,9 +91,9 @@
 						The server has blocked your IP address ({link.ip}).
 					{:else if $disconnectReason == "E:110 | ID conflict"}
 						There has been a hiccup! Looks like you logged into
-						Meower from another device.
+						Streamilator Talk from another device.
 						<br /><br />
-						Please check any devices currently logged into Meower and
+						Please check any devices currently logged into Streamilator Talk and
 						try again.
 					{:else if $disconnectReason == "E:018 | Account Banned"}
 						You have been banned by a moderator.
@@ -107,6 +112,18 @@
 						setupPage.set("reconnect");
 					}}>Reconnect</button
 				>
+				{#if isDev}
+					<button on:click={async () => {
+						localStorage.removeItem("meower_linkurl")
+						localStorage.removeItem("meower_apiurl")
+						location.reload()
+					}}>Reset Server URLS</button>
+					<button on:click={async () => {
+						disconnected.set(false);
+						$modalPage = "devTools"
+						$modalShown = true
+					}}>Open dev tools</button>
+				{/if}
 			</div>
 		</Modal>
 	{/if}
@@ -151,6 +168,8 @@
 			<RemoveMemberModal />
 		{:else if $modalPage === "linkDiscord"}
 			<LinkDiscord />
+		{:else if $modalPage === "devTools"}
+			<DevTooldModal /> <!-- wip dev tools -->
 		{:else}
 			<ErrorModal />
 		{/if}
