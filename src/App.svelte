@@ -42,6 +42,7 @@
 		modPanelOpen,
 	} from "./lib/stores.js";
 	import {tick} from "svelte";
+	var isDev = false
 	if (window.location.href != "https://svelte.streamilator.tk") {
 		isDev = true
 	}
