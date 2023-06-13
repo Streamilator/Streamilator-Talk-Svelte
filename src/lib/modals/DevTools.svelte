@@ -136,6 +136,15 @@
 		<h1>Developer tools</h1>
 		Hello everyone its THE DEV TOOLS HERE back with another youtube video!!!!!!
 	</Container>
+	<Container>
+		<h2>Info</h2>
+		<h4>Stores</h4>
+		<ul>
+			<li>MainPage: {page} </li>
+			<li>ModalPage: {modalPage} </li>
+			<li>User (JSON): {JSON.stringify(user)} </li>
+		</ul>
+	</Container>
 <!-- 	<Container style="height: 150px;">
 		<div class="settings-controls">
             <input bind:value={whusername} type="text" id="username" style="margin-bottom:4px" class="white">
@@ -205,6 +214,24 @@
 			Created by the bettermeower team
 		</small>
 	</Container>
+<Container>
+	<div class="settings-controls">
+		<button
+			class="circle settings"
+			on:click={() => {
+				cljs.disconnect();
+				console.warn("Disconnection from ST server triggered via developer tools")
+			}}
+		></button>
+	</div>
+
+	<h2>Disconnect</h2>
+	Disconnects from the server by calling CLJS.disconnect()
+	<br>
+	<small style="font-size: 0.5em;">
+		Created by the bettermeower team
+	</small>
+</Container>
 <Container>
 	<div class="settings-controls">
 		<button
