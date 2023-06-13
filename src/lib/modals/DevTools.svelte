@@ -140,9 +140,9 @@
 		<h2>Info</h2>
 		<h4>Stores</h4>
 		<ul>
-			<li>MainPage: {page} </li>
-			<li>ModalPage: {modalPage} </li>
-			<li>User (JSON): {JSON.stringify(user)} </li>
+			<li>MainPage: {JSON.stringify($page)} </li>
+			<li>ModalPage: {JSON.stringify($modalPage)} </li>
+			<li>User (JSON): {JSON.stringify($user)} </li>
 		</ul>
 	</Container>
 <!-- 	<Container style="height: 150px;">
