@@ -17,7 +17,7 @@
 	import {tick} from "svelte";
 	import {fade} from "svelte/transition";
 
-	import meowy from "../assets/meowy.svg";
+	// import meowy from "../assets/meowy.svg";
 	import logo from "../assets/logo.svg";
 	import home from "../assets/home.svg";
 	import gc from "../assets/chat.svg";
@@ -144,7 +144,6 @@
 			popupShown = !popupShown;
 			popupDebounce = true;
 			setTimeout(() => (popupDebounce = false), 150);
-			if(shiftHeld) {$isDev = true}
 		}}
 	>
 		<PFP
@@ -215,14 +214,6 @@
 			<img src={settings} alt="Developer tools" draggable={false} />
 			<span class="label">Devtools</span>
 		</button>
-		<button
-			on:click={() => { goto("groupcat") }}
-			class="logout-btn round"
-		>
-			<img src={meowy} alt="Group cat(girl)" draggable={false} />
-			<span class="label">Group cat(girl)</span>
-		</button>
-		<!-- 	DEV	   -->
 		{/if}
 	</div>
 {/if}
