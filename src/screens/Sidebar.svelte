@@ -17,7 +17,7 @@
 	import {tick} from "svelte";
 	import {fade} from "svelte/transition";
 
-	import streamychan from "../assets/meowy.svg";
+	import meowy from "../assets/meowy.svg";
 	import logo from "../assets/logo.svg";
 	import home from "../assets/home.svg";
 	import gc from "../assets/chat.svg";
@@ -219,7 +219,7 @@
 			on:click={() => { goto("groupcat") }}
 			class="logout-btn round"
 		>
-			<img src={streamychan} alt="Group cat(girl)" draggable={false} />
+			<img src={meowy} alt="Group cat(girl)" draggable={false} />
 			<span class="label">Group cat(girl)</span>
 		</button>
 		<!-- 	DEV	   -->
