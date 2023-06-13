@@ -121,7 +121,6 @@
 		mainPage as page,
 		user,
 		profileClicked,
-		chatid,
 		modalShown,
 		modalPage,
 		lastTyped,
