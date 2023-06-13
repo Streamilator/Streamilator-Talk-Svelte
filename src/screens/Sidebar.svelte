@@ -144,7 +144,7 @@
 			popupShown = !popupShown;
 			popupDebounce = true;
 			setTimeout(() => (popupDebounce = false), 150);
-			if(shiftHeld) {$dev = true}
+			if(shiftHeld) {$isDev = true}
 		}}
 	>
 		<PFP
