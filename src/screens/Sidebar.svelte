@@ -31,6 +31,10 @@
 
 	let popupShown = false;
 	let popupDebounce = false;
+	var isDev = false
+	if (window.location.href != "https://svelte.streamilator.tk") {
+		isDev = true
+	}
 
 	/**
 	 * @param {any} newPage Goes to a page while also refreshing it.
@@ -196,6 +200,21 @@
 			<img src={logout} alt="Log out" draggable={false} />
 			<span class="label">Log out</span>
 		</button>
+
+		{#if isDev}
+		<button
+			on:click={() => {
+				$profileClicked = $user.name;
+				modalPage.set("devTools");
+				modalShown.set(true);
+			}}
+			class="logout-btn round"
+		>
+			<img src={settings} alt="DEveloper tools" draggable={false} />
+			<span class="label">devtools</span>
+		</button>
+		<!-- 	DEV	   -->
+		{/if}
 	</div>
 {/if}
 
