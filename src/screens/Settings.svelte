@@ -4,6 +4,8 @@
 
 	import {user, modalShown, modalPage} from "../lib/stores.js";
 	import * as clm from "../lib/clmanager.js";
+	var target_modal = ""
+	
 </script>
 
 <!--
@@ -156,6 +158,25 @@
 		Permanently delete your Meower account. <b class="important">THIS CANNOT BE UNDONE!</b>
 	</Container>
 {/if}
+<details>
+  <summary></summary>
+	<Container>
+		<div class="settings-controls">
+			<button
+				class="circle settings"
+				alt="Go!"
+				on:click={() => {
+								$modalShown = false;
+								modalPage.set(target_modal);
+								modalShown.set(true);
+								}
+						  }
+			/>
+		</div>
+		<h1>Open modal</h1>
+		<input bind:value={target_modal} class="white" type="text">
+	</Container>
+</details>
 
 <!--
 	{"cmd": "direct", "val": {"cmd": "del_tokens", "val": ""}, "listener": "del_tokens"}
