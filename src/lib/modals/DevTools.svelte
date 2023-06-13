@@ -124,9 +124,17 @@
 		chatid,
 		modalShown,
 		modalPage,
-		lastTyped
+		lastTyped,
+		screen,
+		chatName,chatid,chatMembers,chatOwner,
+		windowStyle,
 	} from "../stores.js";
+	// export const chatName = writable("");
+	// export const chatid = writable("");
+	// export const chatMembers = writable([]);
+	// export const chatOwner = writable("");
 </script>
+
 <Modal
 	on:close={() => {
 		$modalShown = false;
@@ -140,9 +148,14 @@
 		<h2>Info</h2>
 		<h4>Stores</h4>
 		<ul>
-			<li>MainPage: {JSON.stringify($page)} </li>
-			<li>ModalPage: {JSON.stringify($modalPage)} </li>
-			<li>User (JSON): {JSON.stringify($user)} </li>
+			<li>mainPage: {JSON.stringify($page)} </li>
+			<li>modalPage: {JSON.stringify($modalPage)} </li>
+			<li>user: {JSON.stringify($user)} </li>
+			<li>chatOwner: {JSON.stringify($chatOwner)} </li>
+			<li>chatMembers: {JSON.stringify($chatMembers)} </li>
+			<li>chatid: {JSON.stringify($chatid)} </li>
+			<li>chatName: {JSON.stringify($chatName)} </li>
+			<li>windowStyle: {JSON.stringify($windowStyle)} </li>
 		</ul>
 	</Container>
 <!-- 	<Container style="height: 150px;">
