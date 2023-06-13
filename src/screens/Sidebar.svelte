@@ -33,7 +33,7 @@
 	let popupShown = false;
 	let popupDebounce = false;
 	var isDev = false
-	if (window.location.href != "https://svelte.streamilator.tk") {
+	if (window.location.href != "https://svelte.streamilator.tk/") {
 		isDev = true
 	}
 
