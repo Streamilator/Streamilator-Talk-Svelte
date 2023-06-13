@@ -17,6 +17,7 @@
 	import {tick} from "svelte";
 	import {fade} from "svelte/transition";
 
+	import streamychan from "../assets/meowy.svg";
 	import logo from "../assets/logo.svg";
 	import home from "../assets/home.svg";
 	import gc from "../assets/chat.svg";
@@ -143,6 +144,7 @@
 			popupShown = !popupShown;
 			popupDebounce = true;
 			setTimeout(() => (popupDebounce = false), 150);
+			if(shiftHeld) {$dev = true}
 		}}
 	>
 		<PFP
@@ -210,8 +212,15 @@
 			}}
 			class="logout-btn round"
 		>
-			<img src={settings} alt="DEveloper tools" draggable={false} />
-			<span class="label">devtools</span>
+			<img src={settings} alt="Developer tools" draggable={false} />
+			<span class="label">Devtools</span>
+		</button>
+		<button
+			on:click={() => { goto("groupcat") }}
+			class="logout-btn round"
+		>
+			<img src={streamychan} alt="Group cat(girl)" draggable={false} />
+			<span class="label">Group cat(girl)</span>
 		</button>
 		<!-- 	DEV	   -->
 		{/if}
