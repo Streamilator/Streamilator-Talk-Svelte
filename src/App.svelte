@@ -46,6 +46,7 @@
 	if (window.location.href != "https://svelte.streamilator.tk") {
 		isDev = true
 	}
+	var meowch = round(Math.random() * 10) == 9
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,6 +105,9 @@
 						<pre><code>{$disconnectReason}</code></pre>
 					{/if}
 				</p>
+				{#if meowch}
+					<video src="./me-owch%20(1).mp4>
+				{/if}
 				<button
 					on:click={async () => {
 						screen.set("setup");
